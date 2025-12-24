@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<!-- Office JS -->
+<script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+<script>
+   // Outlook loads this file to execute functions referenced in manifest.xml
+   Office.onReady(() => {});
+   // Must match <FunctionName> in manifest.xml exactly
+   function reportConcern(event) {
+     Office.context.ui.openBrowserWindow("https://maaden.ethicspoint.com/");
+     event.completed(); // important: tells Outlook we're done
+   }
+</script>
+</head>
+<body></body>
+</html>
